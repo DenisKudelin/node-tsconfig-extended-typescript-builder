@@ -1,6 +1,6 @@
 {
   "name": "tsconfig-extended-typescript-builder",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": "Denis Kudelin", 
   "repository": {
@@ -12,7 +12,7 @@
     "mkdirp": "0.5.1",
     "q": "1.4.1",
     "rimraf": "2.5.4",
-    "typescript": "1.8.10",
+    "typescript": "2.0.6",
     "chalk": "1.1.3",
     "globule": "1.0.0"
   },

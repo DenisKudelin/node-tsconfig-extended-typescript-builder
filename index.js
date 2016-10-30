@@ -82,12 +82,12 @@ function getTsconfigData(tsconfigPath) {
         copyFiles: _.isArray(tsconfig.copyFilesGlob)
             ? globule.find(tsconfig.copyFilesGlob, { srcBase: rootDir })
             : [],
-        compilerOptions: convertCompilerOptions(tsconfig.compilerOptions).options
+        compilerOptions: convertCompilerOptions(tsconfig.compilerOptions, rootDir).options
     };
 }
 
-function convertCompilerOptions(compilerOptions) {
-    return typescript.parseJsonConfigFileContent({ compilerOptions: compilerOptions, files: [] });
+function convertCompilerOptions(compilerOptions, rootDir) {
+    return typescript.parseJsonConfigFileContent({ compilerOptions: compilerOptions, files: [] }, {}, rootDir);
 }
 
 function getAbsoluteOrRelativePath(targetPath, rootPath) {
